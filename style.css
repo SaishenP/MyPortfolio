@@ -72,6 +72,7 @@ li {
 /* sets the space between each "container" */
 .container {
   padding: 50px 0;
+  text-align: center;
 }
 /* Keeps content in a box */
 .row {
@@ -180,16 +181,21 @@ nav {
 /* Styling the links */
 .about-me__link{
   font-size: 20px;
-  color: cadetblue;
+  color: #609d9f;
   text-decoration: none;
   padding:0 16px;
 }
 .about-me__links{
   animation: fade-up 650ms 800ms backwards;
 }
-.about-me__img--container{
+.about-me__img{
   width:100%;
-  animation: fade-in 1200ms 800ms backwards;
+  animation:fade-in 1200ms 800ms backwards;
+}
+.about-me__img--container{
+  flex:1;
+  display: flex;
+  align-items: center;
 }
 .wave{
   display:inline-block;
@@ -224,4 +230,58 @@ nav {
   100%{
     transform: rotate(0);
   }
+}
+
+/* SKILLS */
+.card{
+  display:flex;
+  height: 360px;
+  width: 280px;
+  padding: 20px 35px;
+  background: rgb(50,100,173);
+  background: radial-gradient(circle, rgba(50,100,173,1) 0%, rgba(0,19,19,1) 100%);
+  border-radius: 20px;
+  box-shadow:-1rem 0 3rem rgba(0, 0, 0,0.2);
+  transition: 0.4s ease-out;
+  display:inline-block;
+  text-align: center;
+  position:relative;
+  left: 0px;
+}
+.card i{
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  margin: 25px 0px;
+  color:white;
+}
+.card--title{
+  color:white;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+.card:not(:first-child){
+  margin-left:-20px;
+}
+.card:hover{
+  transform:translateY(-10px);
+  transition: 0.4s ease-out;
+}
+.card:hover ~ .card{
+position:relative;
+left: 20px;
+transition: 0.4s ease-out;
+}
+.card--title{
+  color:white;
+  font-weight: 30px;
+  position:absolute;
+  left: 20px;
+  top: 15px;
+}
+.Skills--text p{
+  color:white;
+  font-size: 10px;
+  line-height:27px;
+  margin-bottom: 25px;
 }
