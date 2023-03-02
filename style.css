@@ -162,6 +162,7 @@ nav {
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
   margin-bottom: 28px;
+  animation: animate-profile-picture 800ms 200ms backwards;
 }
 /* The  fitment of the picture in the circle */
 .about-me__picture{
@@ -231,8 +232,14 @@ nav {
     transform: rotate(0);
   }
 }
+@keyframes animate-profile-picture{
+  0%{
+    
+  }
+}
 
 /* SKILLS */
+/* The card features  */
 .card{
   display:flex;
   height: 360px;
@@ -248,6 +255,7 @@ nav {
   position:relative;
   left: 0px;
 }
+/* Contorls the icons in the card */
 .card i{
   font-size: 30px;
   display: block;
@@ -260,18 +268,22 @@ nav {
   font-size: 13px;
   margin-bottom: 15px;
 }
+/* Tells the card to move to the right if not selected */
 .card:not(:first-child){
   margin-left:-20px;
 }
+/* effects when the mouse hovers on the card */
 .card:hover{
   transform:translateY(-10px);
   transition: 0.4s ease-out;
 }
+/* So the card moves upwards  */
 .card:hover ~ .card{
 position:relative;
 left: 20px;
 transition: 0.4s ease-out;
 }
+/* Controls the card title */
 .card--title{
   color:white;
   font-weight: 30px;
@@ -279,9 +291,11 @@ transition: 0.4s ease-out;
   left: 20px;
   top: 15px;
 }
+/* Contols the card Parapgraph */
 .Skills--text p{
   color:white;
   font-size: 10px;
   line-height:27px;
   margin-bottom: 25px;
 }
+/* Tech Stack */
