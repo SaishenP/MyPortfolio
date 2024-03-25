@@ -464,6 +464,9 @@ footer {
   transform: translateX(60px);
   opacity: 1;
 }
+.icon-container{
+    display: inline-block;
+}
 .wrapper {
   display: inline-flex;
   list-style: none;
